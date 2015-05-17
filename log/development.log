@@ -1,0 +1,433 @@
+
+
+Started GET "/" for ::1 at 2015-05-17 11:15:06 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 2885ms (Views: 2874.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 14:57:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (23.2ms)
+Completed 200 OK in 121ms (Views: 111.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/jquery-71d80791a001602dc4437f68dcdd7a5d.js?body=1" for ::1 at 2015-05-17 14:57:53 -0500
+
+
+Started GET "/assets/jquery_ujs-208d465d4bbaaab4bff9a45132b09744.js?body=1" for ::1 at 2015-05-17 14:57:53 -0500
+
+
+Started GET "/assets/application-2fca5ebf68d9aa6f9989f1e987f72f1a.css?body=1" for ::1 at 2015-05-17 14:57:53 -0500
+
+
+Started GET "/assets/messages-7ef84d05e2f06e8ec197af486f8b7b81.js?body=1" for ::1 at 2015-05-17 14:57:53 -0500
+
+
+Started GET "/assets/application-2c86ede9096e1d0242331da26fec9f8a.js?body=1" for ::1 at 2015-05-17 14:57:53 -0500
+
+
+Started GET "/assets/Roboto/roboto-bold-webfont-4482c9f69cad8693448fc05ada3a55ca.woff" for ::1 at 2015-05-17 14:57:53 -0500
+
+
+Started GET "/assets/Roboto/roboto-thin-webfont-6cd8c01a079c55ceedb9c9e9e9291728.woff" for ::1 at 2015-05-17 14:57:53 -0500
+
+
+Started GET "/assets/fontawesome-webfont-12547bee1d2a363a88add933b41bd0f0.woff2?v=4.3.0" for ::1 at 2015-05-17 14:57:53 -0500
+
+
+Started GET "/assets/Roboto/roboto-regular-webfont-197aac13706fc206d05a1f042f076c72.woff" for ::1 at 2015-05-17 14:57:53 -0500
+
+
+Started GET "/assets/Roboto/roboto-light-webfont-60dec66a1e93a3494a38a55dbd2cc54f.woff" for ::1 at 2015-05-17 14:57:53 -0500
+
+
+Started GET "/" for ::1 at 2015-05-17 16:14:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 3041ms (Views: 3031.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application-f3fe76bc40a5e7e533d524a7e7d004e8.css?body=1" for ::1 at 2015-05-17 16:14:43 -0500
+
+
+Started GET "/assets/jquery-6cc3845de071c98c7d40c11532d06903.js?body=1" for ::1 at 2015-05-17 16:14:43 -0500
+
+
+Started GET "/assets/jquery_ujs-ff02169fdc1600ce7c43ea6e5b82c67e.js?body=1" for ::1 at 2015-05-17 16:14:43 -0500
+
+
+Started GET "/assets/messages-c21721ff1e56e1847a8c1b44d3f5e3e6.js?body=1" for ::1 at 2015-05-17 16:14:43 -0500
+
+
+Started GET "/assets/application-4d179a998238ff74bb08d65541354075.js?body=1" for ::1 at 2015-05-17 16:14:43 -0500
+
+
+Started GET "/assets/Roboto/roboto-bold-webfont-6ea6ad3eafbd2eed714aa53225a2b76c.woff" for ::1 at 2015-05-17 16:14:43 -0500
+
+
+Started GET "/assets/Roboto/roboto-thin-webfont-57aff54216c59ab64587e289509be95d.woff" for ::1 at 2015-05-17 16:14:43 -0500
+
+
+Started GET "/assets/Roboto/roboto-regular-webfont-f5e8a2db761a4c6e5109a8d509c8b556.woff" for ::1 at 2015-05-17 16:14:43 -0500
+
+
+Started GET "/assets/Roboto/roboto-light-webfont-8f29a805b143ae8ec17b073e6c2a3278.woff" for ::1 at 2015-05-17 16:14:43 -0500
+
+
+Started GET "/assets/fontawesome-webfont-f31e56cacc8bf94c07459b56d74a59d8.woff2?v=4.3.0" for ::1 at 2015-05-17 16:14:43 -0500
+
+
+Started POST "/messages" for ::1 at 2015-05-17 16:15:14 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iQ5r4giGHa4vR2FwmbX2YkUk4TCR4peZM274SQyPdtXwkFif6dF3SVJ26GMuv6vces6YhjSEy3r0w6EXBXHKnQ==", "message"=>{"sender"=>"  cicean@gmail.com", "recipient"=>"cicean@gmail.com", "body"=>"testing"}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered messages/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 41ms (Views: 34.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/messages" for ::1 at 2015-05-17 16:15:21 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b0wIdlSw51BthGGIrqsla1hRi30/pREQ5efEuLxOabYW0jsLteeNtxC16JsZoXjVZ7vyy5rDTfMiSp3mtbDV/g==", "message"=>{"sender"=>"  cicean@gmail.com", "recipient"=>"cicean@gmail.com", "body"=>"testing"}, "commit"=>"Send"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  Rendered messages/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/messages" for ::1 at 2015-05-17 16:32:31 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b0wIdlSw51BthGGIrqsla1hRi30/pREQ5efEuLxOabYW0jsLteeNtxC16JsZoXjVZ7vyy5rDTfMiSp3mtbDV/g==", "message"=>{"sender"=>"  cicean@gmail.com", "recipient"=>"cicean@gmail.com", "body"=>"testing"}, "commit"=>"Send"}
+Completed 500 Internal Server Error in 11ms
+
+ArgumentError (A regular expression or a proc or lambda must be supplied as :with):
+  app/models/message.rb:5:in `<class:Message>'
+  app/models/message.rb:1:in `<top (required)>'
+  app/models/message_creator.rb:5:in `initialize'
+  app/controllers/messages_controller.rb:7:in `new'
+  app/controllers/messages_controller.rb:7:in `create'
+
+
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.0ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (45.2ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (107.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 16:35:14 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 20ms
+
+SyntaxError (/Users/ZHY/easycomm-mw/app/views/messages/new.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+...er.append=( f.label :sender sms using number :4696196563);@o...
+...                               ^
+/Users/ZHY/easycomm-mw/app/views/messages/new.html.erb:8: syntax error, unexpected ':', expecting ')'
+...abel :sender sms using number :4696196563);@output_buffer.sa...
+...                               ^):
+  app/views/messages/new.html.erb:8: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/views/messages/new.html.erb:8: syntax error, unexpected ':', expecting ')'
+
+
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.4ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (34.6ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (77.4ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 16:37:39 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (30.9ms)
+Completed 200 OK in 131ms (Views: 122.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 16:43:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 117ms (Views: 107.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application-f3fe76bc40a5e7e533d524a7e7d004e8.css?body=1" for ::1 at 2015-05-17 16:43:03 -0500
+
+
+Started GET "/assets/jquery-6cc3845de071c98c7d40c11532d06903.js?body=1" for ::1 at 2015-05-17 16:43:03 -0500
+
+
+Started GET "/assets/messages-c21721ff1e56e1847a8c1b44d3f5e3e6.js?body=1" for ::1 at 2015-05-17 16:43:03 -0500
+
+
+Started GET "/assets/jquery_ujs-ff02169fdc1600ce7c43ea6e5b82c67e.js?body=1" for ::1 at 2015-05-17 16:43:03 -0500
+
+
+Started GET "/assets/application-4d179a998238ff74bb08d65541354075.js?body=1" for ::1 at 2015-05-17 16:43:03 -0500
+
+
+Started GET "/assets/Roboto/roboto-bold-webfont-6ea6ad3eafbd2eed714aa53225a2b76c.woff" for ::1 at 2015-05-17 16:43:03 -0500
+
+
+Started GET "/assets/Roboto/roboto-thin-webfont-57aff54216c59ab64587e289509be95d.woff" for ::1 at 2015-05-17 16:43:03 -0500
+
+
+Started GET "/assets/Roboto/roboto-regular-webfont-f5e8a2db761a4c6e5109a8d509c8b556.woff" for ::1 at 2015-05-17 16:43:03 -0500
+
+
+Started GET "/assets/Roboto/roboto-light-webfont-8f29a805b143ae8ec17b073e6c2a3278.woff" for ::1 at 2015-05-17 16:43:03 -0500
+
+
+Started GET "/assets/fontawesome-webfont-f31e56cacc8bf94c07459b56d74a59d8.woff2?v=4.3.0" for ::1 at 2015-05-17 16:43:03 -0500
+
+
+Started GET "/" for ::1 at 2015-05-17 16:44:05 -0500
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 37ms (Views: 36.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-6cc3845de071c98c7d40c11532d06903.js?body=1" for ::1 at 2015-05-17 16:44:05 -0500
+
+
+Started GET "/assets/jquery_ujs-ff02169fdc1600ce7c43ea6e5b82c67e.js?body=1" for ::1 at 2015-05-17 16:44:05 -0500
+
+
+Started GET "/assets/messages-c21721ff1e56e1847a8c1b44d3f5e3e6.js?body=1" for ::1 at 2015-05-17 16:44:05 -0500
+
+
+Started GET "/assets/application-f3fe76bc40a5e7e533d524a7e7d004e8.css?body=1" for ::1 at 2015-05-17 16:44:06 -0500
+
+
+Started GET "/assets/application-4d179a998238ff74bb08d65541354075.js?body=1" for ::1 at 2015-05-17 16:44:06 -0500
+
+
+Started GET "/assets/Roboto/roboto-bold-webfont-6ea6ad3eafbd2eed714aa53225a2b76c.woff" for ::1 at 2015-05-17 16:44:06 -0500
+
+
+Started GET "/assets/fontawesome-webfont-f31e56cacc8bf94c07459b56d74a59d8.woff2?v=4.3.0" for ::1 at 2015-05-17 16:44:06 -0500
+
+
+Started GET "/assets/Roboto/roboto-regular-webfont-f5e8a2db761a4c6e5109a8d509c8b556.woff" for ::1 at 2015-05-17 16:44:06 -0500
+
+
+Started GET "/assets/Roboto/roboto-light-webfont-8f29a805b143ae8ec17b073e6c2a3278.woff" for ::1 at 2015-05-17 16:44:06 -0500
+
+
+Started GET "/assets/Roboto/roboto-thin-webfont-57aff54216c59ab64587e289509be95d.woff" for ::1 at 2015-05-17 16:44:06 -0500
+
+
+Started POST "/messages" for ::1 at 2015-05-17 16:44:43 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iqeELf3DYSTSoXMEw+3T9W+cYAShRoVYr7y8H6fbU4nzObdQHJQLw6+Q+hd0545LUHYZsgQg2btoEeVBriXvwQ==", "message"=>{"sender"=>"4696196563", "recipient"=>"2144363960", "body"=>"testing"}, "commit"=>"Send"}
+Completed 500 Internal Server Error in 3ms
+
+NameError (undefined local variable or method `params' for #<MessageCreator:0x007fe8effb1b18>):
+  app/models/message_creator.rb:23:in `send_sms'
+  app/models/message_creator.rb:12:in `ok?'
+  app/controllers/messages_controller.rb:8:in `create'
+
+
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.6ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.0ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (42.6ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (95.5ms)
+
+
+Started GET "/" for ::1 at 2015-05-17 17:07:13 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 123ms (Views: 114.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application-f3fe76bc40a5e7e533d524a7e7d004e8.css?body=1" for ::1 at 2015-05-17 17:07:13 -0500
+
+
+Started GET "/assets/jquery-6cc3845de071c98c7d40c11532d06903.js?body=1" for ::1 at 2015-05-17 17:07:13 -0500
+
+
+Started GET "/assets/messages-c21721ff1e56e1847a8c1b44d3f5e3e6.js?body=1" for ::1 at 2015-05-17 17:07:13 -0500
+
+
+Started GET "/assets/application-4d179a998238ff74bb08d65541354075.js?body=1" for ::1 at 2015-05-17 17:07:13 -0500
+
+
+Started GET "/assets/jquery_ujs-ff02169fdc1600ce7c43ea6e5b82c67e.js?body=1" for ::1 at 2015-05-17 17:07:13 -0500
+
+
+Started GET "/assets/Roboto/roboto-thin-webfont-57aff54216c59ab64587e289509be95d.woff" for ::1 at 2015-05-17 17:07:13 -0500
+
+
+Started GET "/assets/Roboto/roboto-regular-webfont-f5e8a2db761a4c6e5109a8d509c8b556.woff" for ::1 at 2015-05-17 17:07:14 -0500
+
+
+Started GET "/assets/Roboto/roboto-bold-webfont-6ea6ad3eafbd2eed714aa53225a2b76c.woff" for ::1 at 2015-05-17 17:07:14 -0500
+
+
+Started GET "/assets/fontawesome-webfont-f31e56cacc8bf94c07459b56d74a59d8.woff2?v=4.3.0" for ::1 at 2015-05-17 17:07:14 -0500
+
+
+Started GET "/assets/Roboto/roboto-light-webfont-8f29a805b143ae8ec17b073e6c2a3278.woff" for ::1 at 2015-05-17 17:07:14 -0500
+
+
+Started POST "/messages" for ::1 at 2015-05-17 17:07:27 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b+oh09jiqKZxVsGhCnbPn77IjlxAtcm3vVJcgKq3O3QWdBKuObXCQQxnSLK9fJIhgSL36uXTlVR6/wXeo0mHPA==", "message"=>{"sender"=>"4696196563", "recipient"=>"2144363960", "body"=>"testing"}, "commit"=>"Send"}
+
+SmsSender#send_message: processed outbound mail in 741.0ms
+Completed 500 Internal Server Error in 752ms
+
+NoMethodError (undefined method `redirect_to' for #<SmsSender:0x007fa059e2df00>):
+  app/mailers/sms_sender.rb:13:in `send_message'
+  app/models/message_creator.rb:24:in `send_sms'
+  app/models/message_creator.rb:12:in `ok?'
+  app/controllers/messages_controller.rb:8:in `create'
+
+
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.8ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (39.4ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (89.5ms)
+
+
+Started POST "/messages" for ::1 at 2015-05-17 17:08:41 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b+oh09jiqKZxVsGhCnbPn77IjlxAtcm3vVJcgKq3O3QWdBKuObXCQQxnSLK9fJIhgSL36uXTlVR6/wXeo0mHPA==", "message"=>{"sender"=>"4696196563", "recipient"=>"2144363960", "body"=>"testing"}, "commit"=>"Send"}
+
+SmsSender#send_message: processed outbound mail in 566.3ms
+Completed 500 Internal Server Error in 589ms
+
+NoMethodError (undefined method `redirect_to' for #<SmsSender:0x007fa05e04a988>):
+  app/mailers/sms_sender.rb:13:in `send_message'
+  app/models/message_creator.rb:24:in `send_sms'
+  app/models/message_creator.rb:12:in `ok?'
+  app/controllers/messages_controller.rb:8:in `create'
+
+
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.9ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (37.6ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/ZHY/.rvm/gems/ruby-2.2.2@easycomm/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (80.7ms)
+
+
+Started POST "/messages" for ::1 at 2015-05-17 17:09:39 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b+oh09jiqKZxVsGhCnbPn77IjlxAtcm3vVJcgKq3O3QWdBKuObXCQQxnSLK9fJIhgSL36uXTlVR6/wXeo0mHPA==", "message"=>{"sender"=>"4696196563", "recipient"=>"2144363960", "body"=>"testing"}, "commit"=>"Send"}
+
+SmsSender#send_message: processed outbound mail in 596.2ms
+  Rendered messages/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 643ms (Views: 31.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application-f3fe76bc40a5e7e533d524a7e7d004e8.css?body=1" for ::1 at 2015-05-17 17:09:40 -0500
+
+
+Started GET "/assets/jquery_ujs-ff02169fdc1600ce7c43ea6e5b82c67e.js?body=1" for ::1 at 2015-05-17 17:09:40 -0500
+
+
+Started GET "/assets/messages-c21721ff1e56e1847a8c1b44d3f5e3e6.js?body=1" for ::1 at 2015-05-17 17:09:40 -0500
+
+
+Started GET "/assets/jquery-6cc3845de071c98c7d40c11532d06903.js?body=1" for ::1 at 2015-05-17 17:09:40 -0500
+
+
+Started GET "/assets/application-4d179a998238ff74bb08d65541354075.js?body=1" for ::1 at 2015-05-17 17:09:40 -0500
+
+
+Started GET "/assets/Roboto/roboto-bold-webfont-6ea6ad3eafbd2eed714aa53225a2b76c.woff" for ::1 at 2015-05-17 17:09:40 -0500
+
+
+Started GET "/assets/Roboto/roboto-thin-webfont-57aff54216c59ab64587e289509be95d.woff" for ::1 at 2015-05-17 17:09:40 -0500
+
+
+Started GET "/assets/Roboto/roboto-light-webfont-8f29a805b143ae8ec17b073e6c2a3278.woff" for ::1 at 2015-05-17 17:09:40 -0500
+
+
+Started GET "/assets/fontawesome-webfont-f31e56cacc8bf94c07459b56d74a59d8.woff2?v=4.3.0" for ::1 at 2015-05-17 17:09:40 -0500
+
+
+Started GET "/assets/Roboto/roboto-regular-webfont-f5e8a2db761a4c6e5109a8d509c8b556.woff" for ::1 at 2015-05-17 17:09:40 -0500
+
+
+Started POST "/messages" for ::1 at 2015-05-17 17:09:42 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qHYvHDqOYm4+Box6betfrqWgC0/CGasBVT6cqMtkhizR6Bxh29kIiUM3BWna4QIQmkpy+Wd/9+KSk8X2wpo6ZA==", "message"=>{"sender"=>"4696196563", "recipient"=>"2144363960", "body"=>"testing"}, "commit"=>"Send"}
+
+SmsSender#send_message: processed outbound mail in 368.5ms
+  Rendered messages/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 404ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery-6cc3845de071c98c7d40c11532d06903.js?body=1" for ::1 at 2015-05-17 17:09:42 -0500
+
+
+Started GET "/assets/application-f3fe76bc40a5e7e533d524a7e7d004e8.css?body=1" for ::1 at 2015-05-17 17:09:42 -0500
+
+
+Started GET "/assets/jquery_ujs-ff02169fdc1600ce7c43ea6e5b82c67e.js?body=1" for ::1 at 2015-05-17 17:09:42 -0500
+
+
+Started GET "/assets/messages-c21721ff1e56e1847a8c1b44d3f5e3e6.js?body=1" for ::1 at 2015-05-17 17:09:42 -0500
+
+
+Started GET "/assets/application-4d179a998238ff74bb08d65541354075.js?body=1" for ::1 at 2015-05-17 17:09:42 -0500
+
+
+Started GET "/assets/Roboto/roboto-bold-webfont-6ea6ad3eafbd2eed714aa53225a2b76c.woff" for ::1 at 2015-05-17 17:09:42 -0500
+
+
+Started GET "/assets/fontawesome-webfont-f31e56cacc8bf94c07459b56d74a59d8.woff2?v=4.3.0" for ::1 at 2015-05-17 17:09:42 -0500
+
+
+Started GET "/assets/Roboto/roboto-regular-webfont-f5e8a2db761a4c6e5109a8d509c8b556.woff" for ::1 at 2015-05-17 17:09:42 -0500
+
+
+Started GET "/assets/Roboto/roboto-thin-webfont-57aff54216c59ab64587e289509be95d.woff" for ::1 at 2015-05-17 17:09:43 -0500
+
+
+Started GET "/assets/Roboto/roboto-light-webfont-8f29a805b143ae8ec17b073e6c2a3278.woff" for ::1 at 2015-05-17 17:09:43 -0500

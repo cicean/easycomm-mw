@@ -1,0 +1,818 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 10.5ms | ActiveRecord: 3.7ms)
+  [1m[36m (0.7ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "messages"[0m
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"sender"=>"test@example.com", "recipient"=>"test2@example.com", "body"=>"hello there"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "test@example.com"], ["recipient_email", "test2@example.com"], ["body", "hello there"], ["secure_id", "Dr0moKBbSkbcxgmHz3wtSQ63nAfG1SUBnw"], ["created_at", "2015-05-17 16:14:16.951785"], ["updated_at", "2015-05-17 16:14:16.951785"]]
+  [1m[35m (0.7ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered message_mailer/secure_message.html.erb (2.0ms)
+
+MessageMailer#secure_message: processed outbound mail in 173.1ms
+
+Sent mail to test2@example.com (8.9ms)
+Date: Sun, 17 May 2015 11:14:17 -0500
+From: test@example.com
+To: test2@example.com
+Message-ID: <5558be59224eb_121773fe6414602002488@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from test@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/Dr0moKBbSkbcxgmHz3wtSQ63nAfG1SUBnw
+</p>
+
+
+Redirected to http://test.host/messages/new
+Completed 302 Found in 197ms (ActiveRecord: 2.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"sender"=>"test@example.com", "recipient"=>"test2@example.com", "body"=>"hello there"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "test@example.com"], ["recipient_email", "test2@example.com"], ["body", "hello there"], ["secure_id", "a_aws1OS4sWPRMs-8lpZY9BBSXcua9L37Q"], ["created_at", "2015-05-17 16:14:17.148429"], ["updated_at", "2015-05-17 16:14:17.148429"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered message_mailer/secure_message.html.erb (0.2ms)
+
+MessageMailer#secure_message: processed outbound mail in 2.0ms
+
+Sent mail to test2@example.com (1.5ms)
+Date: Sun, 17 May 2015 11:14:17 -0500
+From: test@example.com
+To: test2@example.com
+Message-ID: <5558be5925535_121773fe641460200249bf@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from test@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/a_aws1OS4sWPRMs-8lpZY9BBSXcua9L37Q
+</p>
+
+
+Redirected to http://test.host/messages/new
+Completed 302 Found in 6ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"sender"=>"test@example.com", "recipient"=>"test2@example.com", "body"=>"hello there"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["sender_email", "test@example.com"], ["recipient_email", "test2@example.com"], ["body", "hello there"], ["secure_id", "UELuxyYUTfkU3g5YaxNgG9EWdfUUTodhrA"], ["created_at", "2015-05-17 16:14:17.157276"], ["updated_at", "2015-05-17 16:14:17.157276"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered message_mailer/secure_message.html.erb (0.2ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.7ms
+
+Sent mail to test2@example.com (1.4ms)
+Date: Sun, 17 May 2015 11:14:17 -0500
+From: test@example.com
+To: test2@example.com
+Message-ID: <5558be5927662_121773fe641460200250e9@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from test@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/UELuxyYUTfkU3g5YaxNgG9EWdfUUTodhrA
+</p>
+
+
+Redirected to http://test.host/messages/new
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"sender"=>nil, "recipient"=>"test2@example.com", "body"=>nil}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered messages/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"sender"=>nil, "recipient"=>"test2@example.com", "body"=>nil}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered messages/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "sender@example.com"], ["recipient_email", "recipient@example.com"], ["body", "body text for the message"], ["secure_id", "hWOK3_o"], ["created_at", "2015-05-17 16:14:17.180291"], ["updated_at", "2015-05-17 16:14:17.180291"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PickupsController#show as HTML
+  Parameters: {"id"=>"hWOK3_o"}
+  [1m[36mMessage Load (0.9ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."secure_id" = $1  ORDER BY "messages"."id" ASC LIMIT 1[0m  [["secure_id", "hWOK3_o"]]
+  Rendered pickups/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 13ms (Views: 4.6ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "sender@example.com"], ["recipient_email", "recipient@example.com"], ["body", "body text for the message"], ["secure_id", "CefW7ro"], ["created_at", "2015-05-17 16:14:17.199258"], ["updated_at", "2015-05-17 16:14:17.199258"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PickupsController#show as HTML
+  Parameters: {"id"=>"CefW7ro"}
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."secure_id" = $1  ORDER BY "messages"."id" ASC LIMIT 1[0m  [["secure_id", "CefW7ro"]]
+  Rendered pickups/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "sender@example.com"], ["recipient_email", "recipient@example.com"], ["body", "body text for the message"], ["secure_id", "5iCS78A"], ["created_at", "2015-05-17 16:14:17.207645"], ["updated_at", "2015-05-17 16:14:17.207645"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PickupsController#show as HTML
+  Parameters: {"id"=>"5iCS78A"}
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."secure_id" = $1  ORDER BY "messages"."id" ASC LIMIT 1[0m  [["secure_id", "5iCS78A"]]
+  Rendered pickups/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/messages/new" for 127.0.0.1 at 2015-05-17 11:14:17 -0500
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 10237ms (Views: 10236.7ms | ActiveRecord: 0.0ms)
+Started POST "/messages" for 127.0.0.1 at 2015-05-17 11:14:27 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "message"=>{"sender"=>"sender@example.com", "recipient"=>"recipient@example.com", "body"=>"Here is the message for you"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "sender@example.com"], ["recipient_email", "recipient@example.com"], ["body", "Here is the message for you"], ["secure_id", "6VPgsjkiY1SdfhiyVSB0VRxvOoV6T9GA9Q"], ["created_at", "2015-05-17 16:14:27.468625"], ["updated_at", "2015-05-17 16:14:27.468625"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered message_mailer/secure_message.html.erb (0.3ms)
+
+MessageMailer#secure_message: processed outbound mail in 2.6ms
+
+Sent mail to recipient@example.com (1.7ms)
+Date: Sun, 17 May 2015 11:14:27 -0500
+From: sender@example.com
+To: recipient@example.com
+Message-ID: <5558be6373e18_121773fe641460200251ce@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from sender@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/6VPgsjkiY1SdfhiyVSB0VRxvOoV6T9GA9Q
+</p>
+
+
+Redirected to http://www.example.com/messages/new
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+Started GET "/messages/new" for 127.0.0.1 at 2015-05-17 11:14:27 -0500
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+Started GET "/pickups/6VPgsjkiY1SdfhiyVSB0VRxvOoV6T9GA9Q" for 127.0.0.1 at 2015-05-17 11:14:27 -0500
+Processing by PickupsController#show as HTML
+  Parameters: {"id"=>"6VPgsjkiY1SdfhiyVSB0VRxvOoV6T9GA9Q"}
+  [1m[36mMessage Load (0.3ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."secure_id" = $1  ORDER BY "messages"."id" ASC LIMIT 1[0m  [["secure_id", "6VPgsjkiY1SdfhiyVSB0VRxvOoV6T9GA9Q"]]
+  Rendered pickups/show.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "sender@example.com"], ["recipient_email", "recipient@example.com"], ["body", "body text for the message"], ["secure_id", "9o__2RI"], ["created_at", "2015-05-17 16:14:27.500353"], ["updated_at", "2015-05-17 16:14:27.500353"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered message_mailer/secure_message.html.erb (0.2ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.9ms
+
+Sent mail to recipient@example.com (1.8ms)
+Date: Sun, 17 May 2015 11:14:27 -0500
+From: sender@example.com
+To: recipient@example.com
+Message-ID: <5558be637b50f_121773fe641460200252e@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from sender@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/9o__2RI
+</p>
+
+
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["sender_email", "sender@example.com"], ["recipient_email", "recipient@example.com"], ["body", "body text for the message"], ["secure_id", "yAMoVyg"], ["created_at", "2015-05-17 16:14:27.509391"], ["updated_at", "2015-05-17 16:14:27.509391"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered message_mailer/secure_message.html.erb (0.1ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.6ms
+
+Sent mail to recipient@example.com (1.5ms)
+Date: Sun, 17 May 2015 11:14:27 -0500
+From: sender@example.com
+To: recipient@example.com
+Message-ID: <5558be637d560_121773fe641460200253b0@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from sender@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/yAMoVyg
+</p>
+
+
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "test@example.com"], ["recipient_email", "test2@example.com"], ["body", "hello there"], ["secure_id", "2WEVKUe1P2iAPzQEtNHl7Ps9LRpZaIBMKw"], ["created_at", "2015-05-17 16:14:27.517584"], ["updated_at", "2015-05-17 16:14:27.517584"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered message_mailer/secure_message.html.erb (0.2ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.6ms
+
+Sent mail to test2@example.com (1.5ms)
+Date: Sun, 17 May 2015 11:14:27 -0500
+From: test@example.com
+To: test2@example.com
+Message-ID: <5558be637f5dd_121773fe64146020025468@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from test@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/2WEVKUe1P2iAPzQEtNHl7Ps9LRpZaIBMKw
+</p>
+
+
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["sender_email", "test@example.com"], ["recipient_email", "test2@example.com"], ["body", "hello there"], ["secure_id", "VquG-wrmnO1JBrLvLOZDpYa5AVVRUHOonA"], ["created_at", "2015-05-17 16:14:27.524250"], ["updated_at", "2015-05-17 16:14:27.524250"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered message_mailer/secure_message.html.erb (0.2ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.7ms
+
+Sent mail to test2@example.com (1.5ms)
+Date: Sun, 17 May 2015 11:14:27 -0500
+From: test@example.com
+To: test2@example.com
+Message-ID: <5558be638101a_121773fe641460200255e4@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from test@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/VquG-wrmnO1JBrLvLOZDpYa5AVVRUHOonA
+</p>
+
+
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "test@example.com"], ["recipient_email", "test2@example.com"], ["body", "hello there"], ["secure_id", "NA53BS8GKC_STEsaIQYXi0V5CBI28Uil0w"], ["created_at", "2015-05-17 16:14:27.531017"], ["updated_at", "2015-05-17 16:14:27.531017"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered message_mailer/secure_message.html.erb (0.2ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.8ms
+
+Sent mail to test2@example.com (1.4ms)
+Date: Sun, 17 May 2015 11:14:27 -0500
+From: test@example.com
+To: test2@example.com
+Message-ID: <5558be63830c2_121773fe641460200256a1@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from test@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/NA53BS8GKC_STEsaIQYXi0V5CBI28Uil0w
+</p>
+
+
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["sender_email", "test@example.com"], ["recipient_email", "test2@example.com"], ["body", "hello there"], ["secure_id", "U0LI4xDVRY7dp5wrRVEaH6dMahpiF_mRWg"], ["created_at", "2015-05-17 16:14:27.539290"], ["updated_at", "2015-05-17 16:14:27.539290"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered message_mailer/secure_message.html.erb (0.2ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.8ms
+
+Sent mail to test2@example.com (1.4ms)
+Date: Sun, 17 May 2015 11:14:27 -0500
+From: test@example.com
+To: test2@example.com
+Message-ID: <5558be6384c69_121773fe641460200257bf@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from test@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/U0LI4xDVRY7dp5wrRVEaH6dMahpiF_mRWg
+</p>
+
+
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages"
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "sender@example.com"], ["recipient_email", "recipient@example.com"], ["body", "body text for the message"], ["secure_id", "vjuWWFc"], ["created_at", "2015-05-17 16:14:27.569309"], ["updated_at", "2015-05-17 16:14:27.569309"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 19ms (Views: 10.9ms | ActiveRecord: 2.6ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "messages"[0m
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"sender"=>"test@example.com", "recipient"=>"test2@example.com", "body"=>"hello there"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "test@example.com"], ["recipient_email", "test2@example.com"], ["body", "hello there"], ["secure_id", "vIQA-5Q9cc8ABd6lTvn-ZqecAQyRHXNjkQ"], ["created_at", "2015-05-17 19:53:07.855263"], ["updated_at", "2015-05-17 19:53:07.855263"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered message_mailer/secure_message.html.erb (1.8ms)
+
+MessageMailer#secure_message: processed outbound mail in 167.0ms
+
+Sent mail to test2@example.com (8.5ms)
+Date: Sun, 17 May 2015 14:53:08 -0500
+From: test@example.com
+To: test2@example.com
+Message-ID: <5558f1a486b8_12d673ffd744601fc884a5@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from test@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/vIQA-5Q9cc8ABd6lTvn-ZqecAQyRHXNjkQ
+</p>
+
+
+Redirected to http://test.host/messages/new
+Completed 302 Found in 187ms (ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"sender"=>"test@example.com", "recipient"=>"test2@example.com", "body"=>"hello there"}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "test@example.com"], ["recipient_email", "test2@example.com"], ["body", "hello there"], ["secure_id", "rz_TWrtw0xqM8XII8kX2WzqnQJOCYQHkZg"], ["created_at", "2015-05-17 19:53:08.042291"], ["updated_at", "2015-05-17 19:53:08.042291"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered message_mailer/secure_message.html.erb (0.2ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.6ms
+
+Sent mail to test2@example.com (1.3ms)
+Date: Sun, 17 May 2015 14:53:08 -0500
+From: test@example.com
+To: test2@example.com
+Message-ID: <5558f1a4b4a5_12d673ffd744601fc8858d@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from test@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/rz_TWrtw0xqM8XII8kX2WzqnQJOCYQHkZg
+</p>
+
+
+Redirected to http://test.host/messages/new
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"sender"=>"test@example.com", "recipient"=>"test2@example.com", "body"=>"hello there"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["sender_email", "test@example.com"], ["recipient_email", "test2@example.com"], ["body", "hello there"], ["secure_id", "i8lf-UCnb25Yf9XKz7HEdiadrPaWTn7IfA"], ["created_at", "2015-05-17 19:53:08.050927"], ["updated_at", "2015-05-17 19:53:08.050927"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered message_mailer/secure_message.html.erb (0.2ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.9ms
+
+Sent mail to test2@example.com (1.7ms)
+Date: Sun, 17 May 2015 14:53:08 -0500
+From: test@example.com
+To: test2@example.com
+Message-ID: <5558f1a4d885_12d673ffd744601fc886a6@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from test@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/i8lf-UCnb25Yf9XKz7HEdiadrPaWTn7IfA
+</p>
+
+
+Redirected to http://test.host/messages/new
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"sender"=>nil, "recipient"=>"test2@example.com", "body"=>nil}}
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered messages/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 1.1ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Processing by MessagesController#create as HTML
+  Parameters: {"message"=>{"sender"=>nil, "recipient"=>"test2@example.com", "body"=>nil}}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered messages/new.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "sender@example.com"], ["recipient_email", "recipient@example.com"], ["body", "body text for the message"], ["secure_id", "JLffskI"], ["created_at", "2015-05-17 19:53:08.082065"], ["updated_at", "2015-05-17 19:53:08.082065"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PickupsController#show as HTML
+  Parameters: {"id"=>"JLffskI"}
+  [1m[36mMessage Load (0.3ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."secure_id" = $1  ORDER BY "messages"."id" ASC LIMIT 1[0m  [["secure_id", "JLffskI"]]
+  Rendered pickups/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 19ms (Views: 9.9ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "sender@example.com"], ["recipient_email", "recipient@example.com"], ["body", "body text for the message"], ["secure_id", "yXAd8Vk"], ["created_at", "2015-05-17 19:53:08.107198"], ["updated_at", "2015-05-17 19:53:08.107198"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PickupsController#show as HTML
+  Parameters: {"id"=>"yXAd8Vk"}
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."secure_id" = $1  ORDER BY "messages"."id" ASC LIMIT 1[0m  [["secure_id", "yXAd8Vk"]]
+  Rendered pickups/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "sender@example.com"], ["recipient_email", "recipient@example.com"], ["body", "body text for the message"], ["secure_id", "H2Kg9KU"], ["created_at", "2015-05-17 19:53:08.115329"], ["updated_at", "2015-05-17 19:53:08.115329"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by PickupsController#show as HTML
+  Parameters: {"id"=>"H2Kg9KU"}
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."secure_id" = $1  ORDER BY "messages"."id" ASC LIMIT 1[0m  [["secure_id", "H2Kg9KU"]]
+  Rendered pickups/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/messages/new" for 127.0.0.1 at 2015-05-17 14:53:08 -0500
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 55ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+Started POST "/messages" for 127.0.0.1 at 2015-05-17 14:53:08 -0500
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "message"=>{"sender"=>"sender@example.com", "recipient"=>"recipient@example.com", "body"=>"Here is the message for you"}, "commit"=>"Send"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "sender@example.com"], ["recipient_email", "recipient@example.com"], ["body", "Here is the message for you"], ["secure_id", "1Yb_n2mATuO9SA5lm3H5Q7s_x6RvnuulPQ"], ["created_at", "2015-05-17 19:53:08.188195"], ["updated_at", "2015-05-17 19:53:08.188195"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered message_mailer/secure_message.html.erb (0.2ms)
+
+MessageMailer#secure_message: processed outbound mail in 2.1ms
+
+Sent mail to recipient@example.com (1.3ms)
+Date: Sun, 17 May 2015 14:53:08 -0500
+From: sender@example.com
+To: recipient@example.com
+Message-ID: <5558f1a42f1b3_12d673ffd744601fc88758@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from sender@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/1Yb_n2mATuO9SA5lm3H5Q7s_x6RvnuulPQ
+</p>
+
+
+Redirected to http://www.example.com/messages/new
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+Started GET "/messages/new" for 127.0.0.1 at 2015-05-17 14:53:08 -0500
+Processing by MessagesController#new as HTML
+  Rendered messages/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started GET "/pickups/1Yb_n2mATuO9SA5lm3H5Q7s_x6RvnuulPQ" for 127.0.0.1 at 2015-05-17 14:53:08 -0500
+Processing by PickupsController#show as HTML
+  Parameters: {"id"=>"1Yb_n2mATuO9SA5lm3H5Q7s_x6RvnuulPQ"}
+  [1m[36mMessage Load (0.2ms)[0m  [1mSELECT  "messages".* FROM "messages" WHERE "messages"."secure_id" = $1  ORDER BY "messages"."id" ASC LIMIT 1[0m  [["secure_id", "1Yb_n2mATuO9SA5lm3H5Q7s_x6RvnuulPQ"]]
+  Rendered pickups/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "sender@example.com"], ["recipient_email", "recipient@example.com"], ["body", "body text for the message"], ["secure_id", "VaVOug8"], ["created_at", "2015-05-17 19:53:08.209934"], ["updated_at", "2015-05-17 19:53:08.209934"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered message_mailer/secure_message.html.erb (0.2ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.5ms
+
+Sent mail to recipient@example.com (1.3ms)
+Date: Sun, 17 May 2015 14:53:08 -0500
+From: sender@example.com
+To: recipient@example.com
+Message-ID: <5558f1a434224_12d673ffd744601fc888e0@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from sender@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/VaVOug8
+</p>
+
+
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["sender_email", "sender@example.com"], ["recipient_email", "recipient@example.com"], ["body", "body text for the message"], ["secure_id", "15PviEo"], ["created_at", "2015-05-17 19:53:08.216894"], ["updated_at", "2015-05-17 19:53:08.216894"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered message_mailer/secure_message.html.erb (0.1ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.4ms
+
+Sent mail to recipient@example.com (1.3ms)
+Date: Sun, 17 May 2015 14:53:08 -0500
+From: sender@example.com
+To: recipient@example.com
+Message-ID: <5558f1a435cd8_12d673ffd744601fc8894e@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from sender@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/15PviEo
+</p>
+
+
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "test@example.com"], ["recipient_email", "test2@example.com"], ["body", "hello there"], ["secure_id", "A3tV6hNQb6azCrjDR2p4lFKpORaSmHhoNQ"], ["created_at", "2015-05-17 19:53:08.223997"], ["updated_at", "2015-05-17 19:53:08.223997"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered message_mailer/secure_message.html.erb (0.1ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.5ms
+
+Sent mail to test2@example.com (1.3ms)
+Date: Sun, 17 May 2015 14:53:08 -0500
+From: test@example.com
+To: test2@example.com
+Message-ID: <5558f1a4378fb_12d673ffd744601fc89065@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from test@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/A3tV6hNQb6azCrjDR2p4lFKpORaSmHhoNQ
+</p>
+
+
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["sender_email", "test@example.com"], ["recipient_email", "test2@example.com"], ["body", "hello there"], ["secure_id", "yC7jFHWZgImMRvpWyJrI-KgtW2Uxg6V1Eg"], ["created_at", "2015-05-17 19:53:08.229913"], ["updated_at", "2015-05-17 19:53:08.229913"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered message_mailer/secure_message.html.erb (0.1ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.4ms
+
+Sent mail to test2@example.com (1.2ms)
+Date: Sun, 17 May 2015 14:53:08 -0500
+From: test@example.com
+To: test2@example.com
+Message-ID: <5558f1a438fa4_12d673ffd744601fc8912b@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from test@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/yC7jFHWZgImMRvpWyJrI-KgtW2Uxg6V1Eg
+</p>
+
+
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "test@example.com"], ["recipient_email", "test2@example.com"], ["body", "hello there"], ["secure_id", "jejmj0dWQ-mZCxVEA9kNG2rZC2uxIQiSsg"], ["created_at", "2015-05-17 19:53:08.235664"], ["updated_at", "2015-05-17 19:53:08.235664"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  Rendered message_mailer/secure_message.html.erb (0.1ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.5ms
+
+Sent mail to test2@example.com (1.3ms)
+Date: Sun, 17 May 2015 14:53:08 -0500
+From: test@example.com
+To: test2@example.com
+Message-ID: <5558f1a43a67f_12d673ffd744601fc89272@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from test@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/jejmj0dWQ-mZCxVEA9kNG2rZC2uxIQiSsg
+</p>
+
+
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["sender_email", "test@example.com"], ["recipient_email", "test2@example.com"], ["body", "hello there"], ["secure_id", "AdkEfHDLZTWG_WnYmfwmVg0VixbGMRtQ6A"], ["created_at", "2015-05-17 19:53:08.241570"], ["updated_at", "2015-05-17 19:53:08.241570"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  Rendered message_mailer/secure_message.html.erb (0.1ms)
+
+MessageMailer#secure_message: processed outbound mail in 1.5ms
+
+Sent mail to test2@example.com (1.3ms)
+Date: Sun, 17 May 2015 14:53:08 -0500
+From: test@example.com
+To: test2@example.com
+Message-ID: <5558f1a43c095_12d673ffd744601fc89332@HONGYUdeMacBook-Pro.local.mail>
+Subject: Secure Message from test@example.com
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1>You have a secure message</h1>
+ 
+<p>
+  You can access your message at
+  http://localhost:3000/pickups/AdkEfHDLZTWG_WnYmfwmVg0VixbGMRtQ6A
+</p>
+
+
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "messages"
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "messages"[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "messages" ("sender_email", "recipient_email", "body", "secure_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["sender_email", "sender@example.com"], ["recipient_email", "recipient@example.com"], ["body", "body text for the message"], ["secure_id", "0XIgZx8"], ["created_at", "2015-05-17 19:53:08.270745"], ["updated_at", "2015-05-17 19:53:08.270745"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m

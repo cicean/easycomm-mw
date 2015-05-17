@@ -6,7 +6,11 @@ class MessageCreator
   end
 
   def ok?
-    save_message && send_notification
+      #if message = Messages.
+      #   save_message && send_notification
+      # else message =
+      send_sms
+    
   end
 
   private
@@ -14,6 +18,13 @@ class MessageCreator
   def send_notification
     MessageMailer.secure_message(@message).deliver_now
   end
+  
+  def send_sms
+      
+      SmsSender.send_message(@message).deliver_now
+      
+  end
+
 
   def save_message
     @message.secure_id = SecureRandom.urlsafe_base64(25)

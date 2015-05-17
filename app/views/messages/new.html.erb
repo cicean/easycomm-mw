@@ -7,6 +7,7 @@
   <div class="control-group required">
     <%= f.label :sender %>
     <div class="control">
+      <small>SMS sender use number 4696196563</small>
       <%= f.text_field :sender %>
       <% if @message.errors[:sender] %>
         <p class="tip error"><%= @message.errors[:sender].join(", ") %></p>
