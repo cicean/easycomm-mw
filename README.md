@@ -58,6 +58,13 @@ recipient fields for your message, you should be able to send a text message to 
 - [Configuring your keys](http://richonrails.com/articles/the-rails-4-1-secrets-yml-file)
 - [First time on Rails?](https://www.railstutorial.org/book)
 
-# Explaination
+# Explaination  about the task
+
+-Use 2 days to set up the enveironments , the rails on windows alwasys have strange bugs and my laptop have been mailed back to repair by machine provider
+-Use 2 day studied the ruby programming language and the ruby on rails web development
+-Use 1 day to finished this debug program using Twilio API(borrowed a MAC from my classmate)
+-Check the message controller and divid the sms function to call the new class SmsSender
+- Why add those methods or objects? // reference from the Twilio API and set up another testing app ,and know the principle 
+- Why modify where you modified, not elsewhere? // the main controller is the messages_controller , this main function will call the class messages and create message, then in class create message have function send_notification , then I insert send sms function to this frame.
 
 
